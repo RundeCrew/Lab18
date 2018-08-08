@@ -1,6 +1,7 @@
 package Lab18;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,8 +12,7 @@ public class Lab18_Algorithm {
 	ArrayList<Integer> num = new ArrayList<>();
 	ArrayList<Integer> dumbnum = new ArrayList<>();
 	int[] otherDumbnum = {1,2,3,2,2,4,5,5,7,8,4,4,1,0,10};
-	Integer[] otherList = new Integer[] {1, 2, 3, 4, 5};
-	dumbnum.addAll(otherDumbnum));
+	dumbnum.addAll(Arrays.asList(otherDumbnum));
 	num.add(0);
 	num.add(1);
 	num.add(2);
@@ -25,16 +25,20 @@ public class Lab18_Algorithm {
 	num.add(9);
 	
 	for (int i = 0 ; i < num.size() ; i++) {
+		int sum = 0;
 			for (int f = 0 ; f < dumbnum.size() ; ++f)
 				if (num.indexOf(i) == dumbnum.indexOf(f)) {
-					System.out.println(num.indexOf(i) + "- " + dumbnum);
+					sum += 1;
+					System.out.println(num.indexOf(i) + "- " + sum);
+					
 				}
 		}
 		System.out.println();
 		
 	}
+}
 	
-	Map<Integer, Integer> freq = new HashMap<>();
+//	Map<Integer, Integer> freq = new HashMap<>();
 
 //		freq.put(1, 0);
 //		freq.put(2, 0);	
@@ -47,15 +51,15 @@ public class Lab18_Algorithm {
 //		freq.put(9, 0);
 //		freq.put(10, 0);
 
-		for (int entry : dumbnum) {
-	          if(freq.containsKey(entry)) {
-	                freq.put(entry, freq.get(entry)+1);
-	            }
-	            else {
-	                freq.put(entry, 1);
-	            }
-	        }
-		System.out.println(freq);
-		}
-	}
+//		for (int entry : dumbnum) {
+//	          if(freq.containsKey(entry)) {
+//	                freq.put(entry, freq.get(entry)+1);
+//	            }
+//	            else {
+//	                freq.put(entry, 1);
+//	            }
+//	        }
+//		System.out.println(freq);
+//		}
+//	}
 
