@@ -12,7 +12,7 @@ public class Lab18_Algorithm {
 	ArrayList<Integer> num = new ArrayList<>();
 	ArrayList<Integer> dumbnum = new ArrayList<>();
 	int[] otherDumbnum = {1,2,3,2,2,4,5,5,7,8,4,4,1,0,10};
-	dumbnum.addAll(Arrays.asList(otherDumbnum));
+	dumbnum.addAll(Arrays.asList(otherDumbnum, 1,2,3,2,2,4,5,5,7,8,4,4,1,0,10));
 	num.add(0);
 	num.add(1);
 	num.add(2);
@@ -23,7 +23,7 @@ public class Lab18_Algorithm {
 	num.add(7);
 	num.add(8);
 	num.add(9);
-	
+	 //Big 0 estimation 0(n^2)
 	for (int i = 0 ; i < num.size() ; i++) {
 		int sum = 0;
 			for (int f = 0 ; f < dumbnum.size() ; ++f)
@@ -50,7 +50,8 @@ public class Lab18_Algorithm {
 //		freq.put(8, 0);
 //		freq.put(9, 0);
 //		freq.put(10, 0);
-
+		
+		// Big 0 estimation 0(n^2)
 //		for (int entry : dumbnum) {
 //	          if(freq.containsKey(entry)) {
 //	                freq.put(entry, freq.get(entry)+1);
